@@ -14,6 +14,7 @@
 int main(int argc, char *argv[]) {
 	if (argc <= 1) {
 		printf("daemonize.exe COMMAND [ARGUMENTS]");
+		return 1;
 	}
 	
 	char* command = argv[1];
