@@ -74,9 +74,6 @@ int main(int argc, char *argv[]) {
 			&startInfo,			// startup info
 			&process)			// process information
 		) {
-
-		printf("Creation of the process failed, trying to fetch error message...\n");
-
 		long lastError = GetLastError();
 		char* message = NULL;
 		
