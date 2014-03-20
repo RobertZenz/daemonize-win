@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 
 		// Calculate the length of all arguments
 		size_t argLength = 0;
-		for (idx = 1; idx < argc; idx++) {
+		for (idx = 2; idx < argc; idx++) {
 			argLength += strlen(argv[idx] + 2 + 1); // One for the space, two for the quotes.
 		}
 		argLength--; // Strip the last space.
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
 		arguments[0] = 0;
 		
 		// Now concatenate the arguments.
-		for (idx = 1; idx < argc; idx++) {
+		for (idx = 2; idx < argc; idx++) {
             strcat(arguments, "\"");
 			strcat(arguments, argv[idx]);
 			strcat(arguments, "\"");
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}
-
+	
 	STARTUPINFO startInfo;
 	PROCESS_INFORMATION process;
 	
